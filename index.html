@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script>
+        window.onload = function() {
+            // Step 2: Find the canvas
+            var canvas = document.getElementById('myCanvas');
+            // Step 3: Access the 2d context (pen or brush)
+            var ctx = canvas.getContext('2d');
+            // Step 4: Render some graphics
+            ctx.fillStyle = 'Green';
+            // Rectangle : (x, y, width, height)
+            ctx.fillRect(300, 200, 200, 100);
+            
+            // ellipse
+            // arc: (x, y, radius, startAngle, endAngle, clock/anticlok wise)
+            ctx.fillStyle = 'Navy';
+            ctx.arc(100, 100, 50, 0, 2 * Math.PI, false);
+            ctx.fill();
+        };
+    </script>
+</head>
+
+<body>
+    <!-- Step 1: Define canvas element -->
+    <canvas id="myCanvas" height="400" width="600" style="background-color: #efefef" />
+
+</body>
+
+</html>
